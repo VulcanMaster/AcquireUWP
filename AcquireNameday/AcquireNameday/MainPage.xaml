@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="AcquireNameday.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AcquireNameday"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <local:MainPageData/>
+    </Page.DataContext>
+    <Grid Background="#FF3C5281">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="479*"/>
+            </Grid.RowDefinitions>
+            <Ellipse Fill="#FF14782F" Grid.Row="1" Stroke="Black"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="58"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox TextWrapping="Wrap" Text="{Binding Greeting, Mode=TwoWay}" RequestedTheme="Dark" FontSize="36"/>
+            <Ellipse Fill="#FF09832B" Grid.Row="1" Stroke="Black"/>
+        </Grid>
+    </Grid>
+</Page>
